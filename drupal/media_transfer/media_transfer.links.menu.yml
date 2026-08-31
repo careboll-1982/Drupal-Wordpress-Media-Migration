@@ -1,0 +1,13 @@
+media_transfer.export_form:
+  title: 'Media migration: export'
+  description: 'Generate a CSV manifest for the WordPress media importer.'
+  route_name: media_transfer.export_form
+  parent: system.admin_content
+  weight: 30
+
+media_transfer.import_form:
+  title: 'Media migration: import'
+  description: 'Import a WordPress attachment CSV into Drupal media.'
+  route_name: media_transfer.import_form
+  parent: system.admin_content
+  weight: 31

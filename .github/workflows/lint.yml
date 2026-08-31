@@ -1,0 +1,19 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  php-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+      - name: Check PHP syntax
+        run: find drupal wordpress -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Validate Composer metadata
+        run: php -r 'json_decode(file_get_contents("drupal/media_transfer/composer.json"), true, 512, JSON_THROW_ON_ERROR);'
+

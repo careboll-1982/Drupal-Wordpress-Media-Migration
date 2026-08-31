@@ -1,0 +1,16 @@
+{
+  "name": "drupal/media_transfer",
+  "description": "Bidirectional media migration between Drupal and WordPress.",
+  "type": "drupal-module",
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "Carlos F. Rebolledo",
+      "email": "carlos@tuimagen.net",
+      "role": "Author and maintainer"
+    }
+  ],
+  "require": {
+    "drupal/core": "^10.2 || ^11"
+  }
+}

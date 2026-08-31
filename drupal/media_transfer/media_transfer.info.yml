@@ -1,0 +1,8 @@
+name: Drupal WordPress Media Migration
+type: module
+description: 'Bidirectional CSV-based media migration between Drupal and WordPress.'
+package: Custom
+core_version_requirement: ^10.2 || ^11
+dependencies:
+  - drupal:file
+  - drupal:media

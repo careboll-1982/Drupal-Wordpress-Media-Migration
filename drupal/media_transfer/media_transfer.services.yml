@@ -1,0 +1,18 @@
+services:
+  media_transfer.manager:
+    class: Drupal\media_transfer\MediaTransferManager
+    arguments:
+      - '@entity_type.manager'
+      - '@file_url_generator'
+      - '@file_system'
+      - '@http_client'
+      - '@keyvalue'
+      - '@logger.channel.media_transfer'
+
+  logger.channel.media_transfer:
+    parent: logger.channel_base
+    arguments: ['media_transfer']
+
+  Drupal\media_transfer\Controller\MediaExportDownloadController:
+    arguments: ['@keyvalue', '@current_user', '@file_system']
+

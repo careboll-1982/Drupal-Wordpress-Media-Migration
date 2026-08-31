@@ -1,0 +1,11 @@
+media_transfer.export_form:
+  route_name: media_transfer.export_form
+  title: 'Export media to WordPress'
+  appears_on:
+    - entity.media.collection
+
+media_transfer.import_form:
+  route_name: media_transfer.import_form
+  title: 'Import media from WordPress'
+  appears_on:
+    - entity.media.collection

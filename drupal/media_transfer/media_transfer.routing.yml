@@ -1,0 +1,23 @@
+media_transfer.export_form:
+  path: '/admin/content/media-transfer/export'
+  defaults:
+    _form: '\Drupal\media_transfer\Form\MediaExportForm'
+    _title: 'Export media to WordPress'
+  requirements:
+    _permission: 'administer media'
+
+media_transfer.download:
+  path: '/admin/content/media-transfer/download/{token}'
+  defaults:
+    _controller: '\Drupal\media_transfer\Controller\MediaExportDownloadController::download'
+  requirements:
+    _permission: 'administer media'
+    token: '[a-f0-9]{64}'
+
+media_transfer.import_form:
+  path: '/admin/content/media-transfer/import'
+  defaults:
+    _form: '\Drupal\media_transfer\Form\MediaImportForm'
+    _title: 'Import media from WordPress'
+  requirements:
+    _permission: 'administer media'
